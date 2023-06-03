@@ -7,12 +7,9 @@
 body{
     background-color: #f0f2f5 ;
     position:relative;
+    display: flex;
     height: 115vh;
     overflow-x: hidden;
-}
-#container{
-    display: flex;
-
 }
 
 #recent-logins{
@@ -37,7 +34,6 @@ body{
     margin-top: 20px;
     margin-bottom: 5px;
 }
-
 #recent-logins > #subtitle{
     color: #606770;
     font-size: 15px;
@@ -92,7 +88,6 @@ body{
     background-color: rgb(20,20,20);
     opacity:0.5;
 }
-
 #card-1:hover #cancel{
     background-color:white;
     opacity:1.0;
@@ -100,13 +95,13 @@ body{
     height: 25px;
     width: 25px;
     line-height: 22px;
-    top: -5px;
+     top: -5px;
     left: -5px;
     font-size:25px;
     transition: 0.3s;
-
+    
 }
-
+    
 #login{
     position:relative;
     background-color: #ffffff;
@@ -120,27 +115,28 @@ body{
     padding: 10px 10px 20px 10px;
     align-items: center;
     box-shadow: 0 5px 5px 3px gainsboro ;
+    
 }
 
 #login > a{
     margin:18px 0;
     text-decoration: none;
     font-size: #1877f2;
-
+    
 }
-#login > a:hover{
+ #login > a:hover{
     text-decoration: underline;
     cursor: pointer;
 }
-
 hr{
     width:95%;
     height: 0.1;
     background-color: rgb(194,193,193);
     border: none;
 }
-
-#login > input[type=email], #login > input[type=password]{
+    
+    
+ #login > input[type=email], #login > input[type=password]{
     height:35%;
     margin: 8px 0;
     border-radius:5px;
@@ -150,18 +146,18 @@ hr{
     border: 1.5px solid #eeeff0;
 
 
+    }
+    
+ #login > input[type=password]{
+        margin-bottom:12px;
 }
-
-#login > input[type=password]{
-    margin-bottom:12px;
-}
-#login > input[type=email]:focus, #login > input[type=password]:focus{
+ #login > input[type=email]:focus, #login > input[type=password]:focus{
     outline: none ;
     border: 1px solid blue;
     box-shadow:0 0 5px #719ece ;
     caret-color: blue;
 }
-
+    
 #login-button{
     background-color: #1877f2;
     color: #ffffff;
@@ -171,3 +167,97 @@ hr{
     font-weight: bold;
     width: 95%;
 }
+#create-new-account{
+    background-color: #42b72a;
+    color: #FFFFFF;
+    font-size: 10px;
+    border-radius: 5px;
+    border: none;
+    height: 100px;
+    font-weight: bold;
+    width: 60%;
+    margin-top: 20px;
+}
+#create-new-account:hover{
+    background-color: #36A420;
+    cursor: pointer;
+}
+p{
+    font-size: 15px;
+    position: absolute;
+    bottom: -55px;
+}
+footer{
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    padding: 20px;
+    color: #a6a8aa;
+    font-size: 12px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    word-spacing: 12px;
+    list-style: 20px;
+}
+@media screen and (max-width:1114px)
+{
+    #recent-logins{
+        left: 70px;
+        margin-right: 22vw;
+    }
+    #login
+    {
+        right: 30px;
+    }
+        
+}
+@media screen and (max-width:900px) 
+{
+    body{
+        height: 150vh;
+    }
+    #container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #recent-logins{
+        margin-right: 0;
+        align-items: center;
+        left: 0;
+        top: 20px;
+    }
+    #card-1{
+        margin-right: 5px;
+    }
+    #card-2{
+        margin-left: 5px;
+        margin-right: 0;
+    }
+    #login{
+        text-align: center;
+        left: 0;
+        margin-right: 0;
+        margin-top: -30px;
+        top: 80px;
+    }
+    #recent-logins, #login{
+        position: relative;
+    }
+    footer{
+        position: absolute;
+        padding: 20px;
+        width: 100vw;
+    
+
+    }
+}
+@media screen and (max-height:670px){
+    footer{
+        position: relative;
+        top: 100px;
+    }
+        
+}          
